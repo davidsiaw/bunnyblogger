@@ -1,0 +1,3 @@
+Q:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\bin\x86\Release\CookComputing.XmlRpcV2.dll
+Q:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Release\ResolveAssemblyReference.cache
+Q:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Release\CookComputing.XmlRpcV2.dll

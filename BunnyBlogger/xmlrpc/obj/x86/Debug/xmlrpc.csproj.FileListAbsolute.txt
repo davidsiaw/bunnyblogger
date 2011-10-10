@@ -1,0 +1,10 @@
+J:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\bin\x86\Debug\CookComputing.XmlRpcV2.dll
+J:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\bin\x86\Debug\CookComputing.XmlRpcV2.pdb
+J:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Debug\ResolveAssemblyReference.cache
+J:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Debug\CookComputing.XmlRpcV2.dll
+J:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Debug\CookComputing.XmlRpcV2.pdb
+Q:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\bin\x86\Debug\CookComputing.XmlRpcV2.dll
+Q:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\bin\x86\Debug\CookComputing.XmlRpcV2.pdb
+Q:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Debug\ResolveAssemblyReference.cache
+Q:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Debug\CookComputing.XmlRpcV2.dll
+Q:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Debug\CookComputing.XmlRpcV2.pdb
