@@ -97,19 +97,10 @@ namespace CookComputing.XmlRpc
 
     public object Invoke(
       MethodInfo mi,
-      params object[] Parameters)
-    {
-        while (true)
-        {
-            try
-            {
-                return Invoke(this, mi, Parameters);
-            }
-            catch
-            {
-            }
-        }
-    }
+	  params object[] Parameters) 
+	{
+		return Invoke(this, mi, Parameters);
+	}
 
     public object Invoke(
       string MethodName,
