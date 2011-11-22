@@ -19,12 +19,14 @@ namespace WordLaunch
 
             using (StreamReader sr = new StreamReader("userpass.txt"))
             {
-                string user = sr.ReadLine();
-                string pass = sr.ReadLine();
-                string url = sr.ReadLine();
-                ServerInfo si = new ServerInfo(new WPConnection(url), user, pass);
+				while (!sr.EndOfStream) {
+					string user = sr.ReadLine();
+					string pass = sr.ReadLine();
+					string url = sr.ReadLine();
+					ServerInfo si = new ServerInfo(new WPConnection(url), user, pass);
 
-                listBox1.Items.Add(si);
+					listBox1.Items.Add(si);
+				}
             }
 
             listBox1.SelectedIndex = 0;
