@@ -197,9 +197,9 @@
             this.txt_Content.Size = new System.Drawing.Size(835, 181);
             this.txt_Content.Snippets.IsOneKeySelectionEmbedEnabled = true;
             this.txt_Content.TabIndex = 0;
-            this.txt_Content.TextChanged += new System.EventHandler(this.txt_Content_TextChanged);
-            this.txt_Content.TextDeleted += new System.EventHandler<ScintillaNet.TextModifiedEventArgs>(this.txt_Content_TextDeleted);
             this.txt_Content.TextInserted += new System.EventHandler<ScintillaNet.TextModifiedEventArgs>(this.txt_Content_TextInserted);
+            this.txt_Content.TextDeleted += new System.EventHandler<ScintillaNet.TextModifiedEventArgs>(this.txt_Content_TextDeleted);
+            this.txt_Content.TextChanged += new System.EventHandler(this.txt_Content_TextChanged);
             this.txt_Content.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Content_KeyDown);
             // 
             // tabPage4
@@ -415,6 +415,7 @@
             this.list_images.TabIndex = 0;
             this.list_images.UseCompatibleStateImageBehavior = false;
             this.list_images.View = System.Windows.Forms.View.Tile;
+            this.list_images.SelectedIndexChanged += new System.EventHandler(this.list_images_SelectedIndexChanged);
             this.list_images.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.list_images_MouseDoubleClick);
             // 
             // ilist_thumbnails

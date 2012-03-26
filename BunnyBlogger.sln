@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FrameSnapper", "FrameSnappe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpServer", "trunk\HttpServer\HttpServer.csproj", "{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueBlocksLib", "..\..\VS\Libs\BlueBlocks\BlueBlocksLib\BlueBlocksLib.csproj", "{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug 1.8|Any CPU = Debug 1.8|Any CPU
@@ -153,6 +155,25 @@ Global
 		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Release|Win32.ActiveCfg = Release|Any CPU
 		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Release|x86.ActiveCfg = Release|Any CPU
 		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Release|x86.Build.0 = Release|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug 1.8|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug 1.8|Any CPU.Build.0 = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug 1.8|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug 1.8|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug 1.8|Win32.ActiveCfg = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug 1.8|x86.ActiveCfg = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug|x86.Build.0 = Debug|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Release|Win32.ActiveCfg = Release|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

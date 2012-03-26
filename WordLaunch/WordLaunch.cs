@@ -22,14 +22,12 @@ using HttpServer.Headers;
 using HttpServer.BodyDecoders;
 using HttpServer.Resources;
 using HttpServer.Modules;
+using BlueBlocksLib.UITools;
 
 namespace WordLaunch
 {
     public partial class WordLaunch : Form
     {
-        
-
-        //ServerInfo localdevserver = new ServerInfo(new WPConnection("http://localhost/wordpress/"), "admin", "davsiaw");
         ServerInfo targetserver;
 
         PluginRpc plugin;
@@ -100,12 +98,6 @@ namespace WordLaunch
                 e.Response.ContentType = new ContentTypeHeader("image/gif");
             }
 
-            //string file = Uri.UnescapeDataString(e.Request.Uri.Segments[e.Request.Uri.Segments.Length - 1]);
-
-            //byte[] content = File.ReadAllBytes(Path.Combine(postResources, file));
-            //e.Response.Body.Write(content, 0, content.Length);
-
-            //e.Response.Body.Flush();
         }
 
 
@@ -125,9 +117,21 @@ namespace WordLaunch
 
         private void WordLaunch_Load(object sender, EventArgs e)
         {
+            txt_Title.Enabled = false;
+            txt_Content.Enabled = false;
+            txt_Title.Text = "Please wait while we load the page...";
+
+            DragDropTools.EnableFileDrop(list_images, files =>
+            {
+                foreach (var file in files)
+                {
+                    AddToImageList(file);
+                }
+            });
+
             geckoWebBrowser1.Navigate(url);
             geckoWebBrowser1.DocumentCompleted += new EventHandler(geckoWebBrowser1_DocumentCompleted);
-           
+                        
         }
 
         void geckoWebBrowser1_Navigated(object sender, GeckoNavigatedEventArgs e)
@@ -174,6 +178,9 @@ namespace WordLaunch
 
         void geckoWebBrowser1_DocumentCompleted(object sender, EventArgs e)
         {
+
+            txt_Title.Text = "";
+
             GeckoDocument doc = geckoWebBrowser1.Document;
             titleElem = FindTagContainingText(doc, originalTitleContent);
             entryElem = FindTagContainingText(doc, originalBodyContent);
@@ -185,6 +192,9 @@ namespace WordLaunch
                 entryElem.InnerHtml = txt_Content.Text;
             }
             geckoWebBrowser1.DocumentCompleted -= new EventHandler(geckoWebBrowser1_DocumentCompleted);
+
+            txt_Title.Enabled = true;
+            txt_Content.Enabled = true;
         }
 
         private void txt_Title_TextChanged(object sender, EventArgs e)
@@ -255,46 +265,49 @@ namespace WordLaunch
 
         private void AddToImageList(string filename)
         {
-
-            string file = Path.GetFileName(filename);
-
-            Bitmap b;
-
-            using (Bitmap tempholder = new Bitmap(filename))
+            try
             {
-                b = new Bitmap(tempholder);
-            }
+                string file = Path.GetFileName(filename);
 
-            Bitmap thumb = new Bitmap(100, 100, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
-            using (Graphics g = Graphics.FromImage(thumb))
-            {
-                g.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
-                g.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-                if (b.Width > b.Height)
+                Bitmap b;
+
+                using (Bitmap tempholder = new Bitmap(filename))
                 {
-                    int height = (int)((double)100.0 / (double)b.Width * (double)b.Height);
-                    g.DrawImage(b, new Rectangle(0, 50 - height / 2, 100, height));
+                    b = new Bitmap(tempholder);
                 }
-                else
+
+                Bitmap thumb = new Bitmap(100, 100, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                using (Graphics g = Graphics.FromImage(thumb))
                 {
-                    int width = (int)((double)100.0 / (double)b.Height * (double)b.Width);
-                    g.DrawImage(b, new Rectangle(50 - width / 2, 0, width, 100));
+                    g.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+                    g.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+                    g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+                    if (b.Width > b.Height)
+                    {
+                        int height = (int)((double)100.0 / (double)b.Width * (double)b.Height);
+                        g.DrawImage(b, new Rectangle(0, 50 - height / 2, 100, height));
+                    }
+                    else
+                    {
+                        int width = (int)((double)100.0 / (double)b.Height * (double)b.Width);
+                        g.DrawImage(b, new Rectangle(50 - width / 2, 0, width, 100));
+                    }
                 }
+
+                ilist_thumbnails.Images.Add(file, thumb);
+
+                ListViewItem lvi = list_images.Items.Add(file);
+                lvi.ImageKey = file;
+
+                ImageInformation ii = new ImageInformation();
+                ii.bitmap = b;
+                ii.uploadedToDevServer = false;
+                ii.filename = file;
+                ii.fullpath = filename;
+
+                lvi.Tag = ii;
             }
-
-            ilist_thumbnails.Images.Add(file, thumb);
-
-            ListViewItem lvi = list_images.Items.Add(file);
-            lvi.ImageKey = file;
-
-            ImageInformation ii = new ImageInformation();
-            ii.bitmap = b;
-            ii.uploadedToDevServer = false;
-            ii.filename = file;
-            ii.fullpath = filename;
-
-            lvi.Tag = ii;
+            catch { }
         }
 
         [Serializable]
@@ -741,6 +754,11 @@ namespace WordLaunch
                 AddToPost(lvi);
                 txt_Content.AppendText("\n");
             }
+        }
+
+        private void list_images_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

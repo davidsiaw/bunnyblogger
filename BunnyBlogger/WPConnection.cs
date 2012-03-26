@@ -250,14 +250,10 @@ namespace BunnyBlogger
 
     public class WPConnection : XMLRPCConnection<IWordpressXmlRpc>
     {
-
-
         public WPConnection(string url)
-            : base(url.EndsWith("/") ? (url + "xmlrpc.php") :( url + "/xmlrpc.php"))
+            : base(url)
         {
         }
-
-
 
         public PageFullInfo GetPage(int blog_id, int page_id, string username, string password)
         {

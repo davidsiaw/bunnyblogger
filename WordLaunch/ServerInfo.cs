@@ -8,19 +8,21 @@ namespace WordLaunch
 {
     public class ServerInfo
     {
-        public ServerInfo(WPConnection conn, string username, string password)
+        public ServerInfo(string name, WPConnection conn, string username, string password)
         {
             this.conn = conn;
             this.username = username;
             this.password = password;
+            this.name = name;
         }
         public WPConnection conn;
         public string username;
         public string password;
+        public string name;
 
         public override string ToString()
         {
-            return conn.URL;
+            return name;
         }
     }
 }

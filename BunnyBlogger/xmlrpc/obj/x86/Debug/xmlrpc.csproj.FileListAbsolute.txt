@@ -13,3 +13,8 @@ C:\Tools\bunnyblogger\BunnyBlogger\xmlrpc\bin\x86\Debug\CookComputing.XmlRpcV2.p
 C:\Tools\bunnyblogger\BunnyBlogger\xmlrpc\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Tools\bunnyblogger\BunnyBlogger\xmlrpc\obj\x86\Debug\CookComputing.XmlRpcV2.dll
 C:\Tools\bunnyblogger\BunnyBlogger\xmlrpc\obj\x86\Debug\CookComputing.XmlRpcV2.pdb
+D:\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\bin\x86\Debug\CookComputing.XmlRpcV2.dll
+D:\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\bin\x86\Debug\CookComputing.XmlRpcV2.pdb
+D:\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Debug\CookComputing.XmlRpcV2.dll
+D:\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Debug\CookComputing.XmlRpcV2.pdb
