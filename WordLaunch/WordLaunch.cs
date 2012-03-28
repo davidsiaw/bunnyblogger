@@ -390,15 +390,30 @@ namespace WordLaunch
                     
                 }
 
+            
             }
 
-            txt_Content.AppendText("<a href=\"" +
-                Uri.EscapeUriString(ii.fullurl) +
-                "\" rel=\"lightbox\"><img src=\"" + Uri.EscapeUriString(ii.medurl) +
-                "\" alt=\"\" title=\"Picture\" width=\"" + ii.medwidth +
-                "\" height=\"" + ii.medheight +
-                "\" class=\"alignnone size-medium wp-image-1204\" /></a>"
-                );
+            if (ii.medwidth <= ii.bitmap.Width && ii.medheight <= ii.bitmap.Height)
+            {
+                txt_Content.AppendText("<a href=\"" +
+                    Uri.EscapeUriString(ii.fullurl) +
+                    "\" rel=\"lightbox\"><img src=\"" + Uri.EscapeUriString(ii.fullurl) +
+                    "\" alt=\"\" title=\"Picture\" width=\"" + ii.medwidth +
+                    "\" height=\"" + ii.medheight +
+                    "\" class=\"alignnone size-medium wp-image-1204\" /></a>"
+                    );
+            }
+            else
+            {
+                txt_Content.AppendText("<a href=\"" +
+                    Uri.EscapeUriString(ii.fullurl) +
+                    "\" rel=\"lightbox\"><img src=\"" + Uri.EscapeUriString(ii.medurl) +
+                    "\" alt=\"\" title=\"Picture\" width=\"" + ii.medwidth +
+                    "\" height=\"" + ii.medheight +
+                    "\" class=\"alignnone size-medium wp-image-1204\" /></a>"
+                    );
+            }
+
         }
 
         private static string GetMedFilename(ImageInformation ii, PicSize sz)

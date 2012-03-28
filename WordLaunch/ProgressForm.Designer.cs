@@ -44,19 +44,21 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
             // 
             // ProgressForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(436, 60);
+            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "ProgressForm";
-            this.Text = "ProgressForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Uploading media...";
             this.Load += new System.EventHandler(this.ProgressForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

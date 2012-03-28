@@ -110,7 +110,7 @@
     <Optimize>true</Optimize>
     <FileAlignment>4096</FileAlignment>
     <NoWarn>649</NoWarn>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>

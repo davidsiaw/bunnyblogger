@@ -108,6 +108,7 @@ namespace WordLaunch
                 {
                     btn_start.Enabled = false;
                     btn_test.Enabled = false;
+                    btn_delsite.Enabled = false;
                     txt_username.Enabled = false;
                     txt_password.Enabled = false;
                     txt_url.Enabled = false;
@@ -116,6 +117,7 @@ namespace WordLaunch
                 {
                     btn_start.Enabled = true;
                     btn_test.Enabled = true;
+                    btn_delsite.Enabled = true;
                     txt_username.Enabled = true;
                     txt_password.Enabled = true;
                     txt_url.Enabled = true;
@@ -195,6 +197,19 @@ namespace WordLaunch
             listBox1.Items[selectedidx] = si;
             updating = false;
             txt_name.Focus();
+        }
+
+        private void btn_delsite_Click(object sender, EventArgs e)
+        {
+            ServerInfo si = (ServerInfo)listBox1.SelectedItem;
+            var res = MessageBox.Show("Are you sure you want to delete " + si.name, "Really?", MessageBoxButtons.YesNo);
+            if (res == System.Windows.Forms.DialogResult.Yes)
+            {
+                int selectedidx = listBox1.SelectedIndex;
+                listBox1.Items.RemoveAt(selectedidx);
+                UpdateFileFromServerList();
+                UpdateUI();
+            }
         }
     }
 }

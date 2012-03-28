@@ -40,6 +40,7 @@
             this.btn_test = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_name = new System.Windows.Forms.TextBox();
+            this.btn_delsite = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -51,7 +52,7 @@
             this.listBox1.IntegralHeight = false;
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(337, 287);
+            this.listBox1.Size = new System.Drawing.Size(337, 258);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -72,7 +73,7 @@
             // 
             this.btn_newSite.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_newSite.Location = new System.Drawing.Point(12, 334);
+            this.btn_newSite.Location = new System.Drawing.Point(12, 305);
             this.btn_newSite.Name = "btn_newSite";
             this.btn_newSite.Size = new System.Drawing.Size(337, 23);
             this.btn_newSite.TabIndex = 7;
@@ -142,7 +143,7 @@
             // 
             this.btn_test.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_test.Location = new System.Drawing.Point(12, 305);
+            this.btn_test.Location = new System.Drawing.Point(12, 276);
             this.btn_test.Name = "btn_test";
             this.btn_test.Size = new System.Drawing.Size(337, 23);
             this.btn_test.TabIndex = 6;
@@ -169,11 +170,24 @@
             this.txt_name.TabIndex = 1;
             this.txt_name.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
             // 
+            // btn_delsite
+            // 
+            this.btn_delsite.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_delsite.Location = new System.Drawing.Point(12, 334);
+            this.btn_delsite.Name = "btn_delsite";
+            this.btn_delsite.Size = new System.Drawing.Size(337, 23);
+            this.btn_delsite.TabIndex = 12;
+            this.btn_delsite.Text = "Delete Site...";
+            this.btn_delsite.UseVisualStyleBackColor = true;
+            this.btn_delsite.Click += new System.EventHandler(this.btn_delsite_Click);
+            // 
             // SelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 369);
+            this.Controls.Add(this.btn_delsite);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_name);
             this.Controls.Add(this.btn_test);
@@ -187,6 +201,7 @@
             this.Controls.Add(this.btn_start);
             this.Controls.Add(this.listBox1);
             this.Name = "SelectionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose a site to connect to...";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,6 +222,7 @@
         private System.Windows.Forms.Button btn_test;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_name;
+        private System.Windows.Forms.Button btn_delsite;
 
     }
 }

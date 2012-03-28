@@ -482,6 +482,7 @@
             this.ClientSize = new System.Drawing.Size(1051, 711);
             this.Controls.Add(this.splitContainer1);
             this.Name = "WordLaunch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WordLaunch";
             this.Load += new System.EventHandler(this.WordLaunch_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
