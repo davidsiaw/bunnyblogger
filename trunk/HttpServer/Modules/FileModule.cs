@@ -166,7 +166,7 @@ namespace HttpServer.Modules
                 string fileExtension = Path.GetExtension(request.Uri.AbsolutePath).TrimStart('.');
 
                 ContentTypeHeader header;
-                if (!ContentTypes.TryGetValue(fileExtension, out header))
+                if (!ContentTypes.TryGetValue(fileExtension.ToLower(), out header))
                     throw new ForbiddenException("Forbidden file type: " + fileExtension);
 
                 response.ContentType = header;

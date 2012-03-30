@@ -393,7 +393,7 @@ namespace WordLaunch
             
             }
 
-            if (ii.medwidth <= ii.bitmap.Width && ii.medheight <= ii.bitmap.Height)
+            if (ii.medwidth == ii.bitmap.Width && ii.medheight == ii.bitmap.Height)
             {
                 txt_Content.AppendText("<a href=\"" +
                     Uri.EscapeUriString(ii.fullurl) +
