@@ -59,5 +59,12 @@ namespace WordLaunch.Properties {
                 resourceCulture = value;
             }
         }
+        
+        internal static System.Drawing.Icon vectoricon {
+            get {
+                object obj = ResourceManager.GetObject("vectoricon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }
