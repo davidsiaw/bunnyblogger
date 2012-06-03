@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -42,20 +43,20 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.newPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backupAllYourPagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deletePageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txt_Pagename = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_Pagename = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_pageslug = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.chk_published = new System.Windows.Forms.CheckBox();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.newPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deletePageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backupAllYourPagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -63,12 +64,12 @@
             this.tabPage1.SuspendLayout();
             this.Editor.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.menuStrip2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BottomToolStripPanel
@@ -132,13 +133,13 @@
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(164, 558);
             this.treeView1.TabIndex = 0;
-            this.treeView1.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.treeView1_GiveFeedback);
-            this.treeView1.DragLeave += new System.EventHandler(this.treeView1_DragLeave);
-            this.treeView1.DragDrop += new System.Windows.Forms.DragEventHandler(this.treeView1_DragDrop);
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            this.treeView1.DragEnter += new System.Windows.Forms.DragEventHandler(this.treeView1_DragEnter);
             this.treeView1.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.treeView1_ItemDrag);
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.treeView1.DragDrop += new System.Windows.Forms.DragEventHandler(this.treeView1_DragDrop);
+            this.treeView1.DragEnter += new System.Windows.Forms.DragEventHandler(this.treeView1_DragEnter);
             this.treeView1.DragOver += new System.Windows.Forms.DragEventHandler(this.treeView1_DragOver);
+            this.treeView1.DragLeave += new System.EventHandler(this.treeView1_DragLeave);
+            this.treeView1.GiveFeedback += new System.Windows.Forms.GiveFeedbackEventHandler(this.treeView1_GiveFeedback);
             // 
             // tabControl1
             // 
@@ -213,39 +214,6 @@
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
-            // menuStrip2
-            // 
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newPageToolStripMenuItem,
-            this.deletePageToolStripMenuItem,
-            this.backupAllYourPagesToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(823, 24);
-            this.menuStrip2.TabIndex = 1;
-            this.menuStrip2.Text = "menuStrip2";
-            // 
-            // newPageToolStripMenuItem
-            // 
-            this.newPageToolStripMenuItem.Name = "newPageToolStripMenuItem";
-            this.newPageToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.newPageToolStripMenuItem.Text = "New Page";
-            this.newPageToolStripMenuItem.Click += new System.EventHandler(this.newPageToolStripMenuItem_Click);
-            // 
-            // backupAllYourPagesToolStripMenuItem
-            // 
-            this.backupAllYourPagesToolStripMenuItem.Name = "backupAllYourPagesToolStripMenuItem";
-            this.backupAllYourPagesToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.backupAllYourPagesToolStripMenuItem.Text = "Backup pages";
-            this.backupAllYourPagesToolStripMenuItem.Click += new System.EventHandler(this.backupAllYourPagesToolStripMenuItem_Click);
-            // 
-            // deletePageToolStripMenuItem
-            // 
-            this.deletePageToolStripMenuItem.Name = "deletePageToolStripMenuItem";
-            this.deletePageToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.deletePageToolStripMenuItem.Text = "Delete Page";
-            this.deletePageToolStripMenuItem.Click += new System.EventHandler(this.deletePageToolStripMenuItem_Click);
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.flowLayoutPanel1);
@@ -256,25 +224,6 @@
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "Page Options";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // txt_Pagename
-            // 
-            this.txt_Pagename.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_Pagename.Location = new System.Drawing.Point(3, 16);
-            this.txt_Pagename.Name = "txt_Pagename";
-            this.txt_Pagename.Size = new System.Drawing.Size(194, 20);
-            this.txt_Pagename.TabIndex = 0;
-            this.txt_Pagename.TextChanged += new System.EventHandler(this.txt_Pagename_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Page Title";
             // 
             // flowLayoutPanel1
             // 
@@ -296,6 +245,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 40);
             this.panel1.TabIndex = 3;
+            // 
+            // txt_Pagename
+            // 
+            this.txt_Pagename.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Pagename.Location = new System.Drawing.Point(3, 16);
+            this.txt_Pagename.Name = "txt_Pagename";
+            this.txt_Pagename.Size = new System.Drawing.Size(194, 20);
+            this.txt_Pagename.TabIndex = 0;
+            this.txt_Pagename.TextChanged += new System.EventHandler(this.txt_Pagename_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Page Title";
             // 
             // panel2
             // 
@@ -343,6 +311,39 @@
             this.chk_published.Text = "Published";
             this.chk_published.UseVisualStyleBackColor = true;
             // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newPageToolStripMenuItem,
+            this.deletePageToolStripMenuItem,
+            this.backupAllYourPagesToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(823, 24);
+            this.menuStrip2.TabIndex = 1;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
+            // newPageToolStripMenuItem
+            // 
+            this.newPageToolStripMenuItem.Name = "newPageToolStripMenuItem";
+            this.newPageToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.newPageToolStripMenuItem.Text = "New Page";
+            this.newPageToolStripMenuItem.Click += new System.EventHandler(this.newPageToolStripMenuItem_Click);
+            // 
+            // deletePageToolStripMenuItem
+            // 
+            this.deletePageToolStripMenuItem.Name = "deletePageToolStripMenuItem";
+            this.deletePageToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.deletePageToolStripMenuItem.Text = "Delete Page";
+            this.deletePageToolStripMenuItem.Click += new System.EventHandler(this.deletePageToolStripMenuItem_Click);
+            // 
+            // backupAllYourPagesToolStripMenuItem
+            // 
+            this.backupAllYourPagesToolStripMenuItem.Name = "backupAllYourPagesToolStripMenuItem";
+            this.backupAllYourPagesToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.backupAllYourPagesToolStripMenuItem.Text = "Backup pages";
+            this.backupAllYourPagesToolStripMenuItem.Click += new System.EventHandler(this.backupAllYourPagesToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,6 +351,7 @@
             this.ClientSize = new System.Drawing.Size(823, 582);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -363,8 +365,6 @@
             this.Editor.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -373,6 +373,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

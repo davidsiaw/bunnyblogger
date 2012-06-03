@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectionForm));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btn_start = new System.Windows.Forms.Button();
             this.btn_newSite = new System.Windows.Forms.Button();
@@ -200,6 +201,7 @@
             this.Controls.Add(this.btn_newSite);
             this.Controls.Add(this.btn_start);
             this.Controls.Add(this.listBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SelectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Choose a site to connect to...";
