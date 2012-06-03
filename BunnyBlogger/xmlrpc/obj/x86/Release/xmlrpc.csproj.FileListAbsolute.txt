@@ -4,3 +4,6 @@ Q:\Download\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Release\CookCompu
 D:\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\bin\x86\Release\CookComputing.XmlRpcV2.dll
 D:\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Release\ResolveAssemblyReference.cache
 D:\BunnyBlogger\clonetest\BunnyBlogger\xmlrpc\obj\x86\Release\CookComputing.XmlRpcV2.dll
+D:\BunnyBlogger\clone4\BunnyBlogger\xmlrpc\bin\x86\Release\CookComputing.XmlRpcV2.dll
+D:\BunnyBlogger\clone4\BunnyBlogger\xmlrpc\obj\x86\Release\ResolveAssemblyReference.cache
+D:\BunnyBlogger\clone4\BunnyBlogger\xmlrpc\obj\x86\Release\CookComputing.XmlRpcV2.dll

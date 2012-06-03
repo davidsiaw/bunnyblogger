@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skybound.Gecko", "Skybound.Gecko\Skybound.Gecko.csproj", "{877D1A24-2D5E-4C46-A933-FCF11EA0403B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordLaunch", "WordLaunch\WordLaunch.csproj", "{54FAEC03-D34D-413F-BB3D-9E3DBE1A6D8B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D80F1636-347C-41CB-880C-85AE39126323} = {D80F1636-347C-41CB-880C-85AE39126323}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FrameSnapper", "FrameSnapper\FrameSnapper.vcxproj", "{D80F1636-347C-41CB-880C-85AE39126323}"
 EndProject
@@ -17,49 +20,38 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueBlocksLib", "blueblocks
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug 1.8|x86 = Debug 1.8|x86
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D4A68CA2-03A0-4993-AA06-3AE42ED28803}.Debug 1.8|x86.ActiveCfg = Debug|x86
-		{D4A68CA2-03A0-4993-AA06-3AE42ED28803}.Debug 1.8|x86.Build.0 = Debug|x86
 		{D4A68CA2-03A0-4993-AA06-3AE42ED28803}.Debug|x86.ActiveCfg = Debug|x86
 		{D4A68CA2-03A0-4993-AA06-3AE42ED28803}.Debug|x86.Build.0 = Debug|x86
 		{D4A68CA2-03A0-4993-AA06-3AE42ED28803}.Release|x86.ActiveCfg = Release|x86
 		{D4A68CA2-03A0-4993-AA06-3AE42ED28803}.Release|x86.Build.0 = Release|x86
-		{1B4B0A58-0AFB-4090-91DD-18912CC7DE65}.Debug 1.8|x86.ActiveCfg = Debug|x86
-		{1B4B0A58-0AFB-4090-91DD-18912CC7DE65}.Debug 1.8|x86.Build.0 = Debug|x86
 		{1B4B0A58-0AFB-4090-91DD-18912CC7DE65}.Debug|x86.ActiveCfg = Debug|x86
 		{1B4B0A58-0AFB-4090-91DD-18912CC7DE65}.Debug|x86.Build.0 = Debug|x86
 		{1B4B0A58-0AFB-4090-91DD-18912CC7DE65}.Release|x86.ActiveCfg = Release|x86
 		{1B4B0A58-0AFB-4090-91DD-18912CC7DE65}.Release|x86.Build.0 = Release|x86
-		{877D1A24-2D5E-4C46-A933-FCF11EA0403B}.Debug 1.8|x86.ActiveCfg = Debug 1.8|x86
-		{877D1A24-2D5E-4C46-A933-FCF11EA0403B}.Debug 1.8|x86.Build.0 = Debug 1.8|x86
 		{877D1A24-2D5E-4C46-A933-FCF11EA0403B}.Debug|x86.ActiveCfg = Debug|x86
 		{877D1A24-2D5E-4C46-A933-FCF11EA0403B}.Debug|x86.Build.0 = Debug|x86
 		{877D1A24-2D5E-4C46-A933-FCF11EA0403B}.Release|x86.ActiveCfg = Release|x86
 		{877D1A24-2D5E-4C46-A933-FCF11EA0403B}.Release|x86.Build.0 = Release|x86
-		{54FAEC03-D34D-413F-BB3D-9E3DBE1A6D8B}.Debug 1.8|x86.ActiveCfg = Debug|x86
-		{54FAEC03-D34D-413F-BB3D-9E3DBE1A6D8B}.Debug 1.8|x86.Build.0 = Debug|x86
 		{54FAEC03-D34D-413F-BB3D-9E3DBE1A6D8B}.Debug|x86.ActiveCfg = Debug|x86
 		{54FAEC03-D34D-413F-BB3D-9E3DBE1A6D8B}.Debug|x86.Build.0 = Debug|x86
 		{54FAEC03-D34D-413F-BB3D-9E3DBE1A6D8B}.Release|x86.ActiveCfg = Release|x86
 		{54FAEC03-D34D-413F-BB3D-9E3DBE1A6D8B}.Release|x86.Build.0 = Release|x86
-		{D80F1636-347C-41CB-880C-85AE39126323}.Debug 1.8|x86.ActiveCfg = Debug|Win32
 		{D80F1636-347C-41CB-880C-85AE39126323}.Debug|x86.ActiveCfg = Debug|Win32
 		{D80F1636-347C-41CB-880C-85AE39126323}.Debug|x86.Build.0 = Debug|Win32
 		{D80F1636-347C-41CB-880C-85AE39126323}.Release|x86.ActiveCfg = Release|Win32
 		{D80F1636-347C-41CB-880C-85AE39126323}.Release|x86.Build.0 = Release|Win32
-		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Debug 1.8|x86.ActiveCfg = Debug|Any CPU
 		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Debug|x86.Build.0 = Debug|Any CPU
 		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Release|x86.ActiveCfg = Release|Any CPU
 		{363D4A84-957E-4CDA-ACB7-EEDE603FDD81}.Release|x86.Build.0 = Release|Any CPU
-		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug 1.8|x86.ActiveCfg = Debug|Any CPU
 		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug|x86.ActiveCfg = Debug|Any CPU
 		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Debug|x86.Build.0 = Debug|Any CPU
 		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Release|x86.ActiveCfg = Release|Any CPU
+		{3E610D1E-838A-4EAB-80AE-CA4E78C2D83A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
