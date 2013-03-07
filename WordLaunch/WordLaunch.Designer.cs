@@ -37,6 +37,7 @@
             this.geckoWebBrowser1 = new Skybound.Gecko.GeckoWebBrowser();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.txt_Title = new System.Windows.Forms.TextBox();
+            this.txt_Content = new ScintillaNet.Scintilla();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -71,7 +72,9 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Content)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -94,6 +97,10 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.tabControl2);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.txt_Content);
             // 
             // splitContainer1.Panel2
             // 
@@ -174,7 +181,27 @@
             this.txt_Title.Size = new System.Drawing.Size(835, 20);
             this.txt_Title.TabIndex = 0;
             this.txt_Title.TextChanged += new System.EventHandler(this.txt_Title_TextChanged);
+            //
+            // txt_Content
             // 
+            this.txt_Content.ConfigurationManager.ClearMarkers = true;
+            this.txt_Content.ConfigurationManager.Language = "html";
+            this.txt_Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_Content.DocumentNavigation.MaxHistorySize = 200;
+            this.txt_Content.Font = new System.Drawing.Font("MS PGothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Content.LineWrap.Mode = ScintillaNet.WrapMode.Word;
+            this.txt_Content.Location = new System.Drawing.Point(0, 0);
+            this.txt_Content.Margins.Margin0.Width = 32;
+            this.txt_Content.Name = "txt_Content";
+            this.txt_Content.OverType = true;
+            this.txt_Content.Size = new System.Drawing.Size(835, 181);
+            this.txt_Content.Snippets.IsOneKeySelectionEmbedEnabled = true;
+            this.txt_Content.TabIndex = 0;
+            this.txt_Content.TextInserted += new System.EventHandler<ScintillaNet.TextModifiedEventArgs>(this.txt_Content_TextInserted);
+            this.txt_Content.TextDeleted += new System.EventHandler<ScintillaNet.TextModifiedEventArgs>(this.txt_Content_TextDeleted);
+            this.txt_Content.TextChanged += new System.EventHandler(this.txt_Content_TextChanged);
+            this.txt_Content.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Content_KeyDown);
+            //  
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.axWindowsMediaPlayer1);
@@ -457,7 +484,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WordLaunch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WordLaunch";
+            this.Text = "BunnyBlogger";
             this.Load += new System.EventHandler(this.WordLaunch_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -469,7 +496,9 @@
             this.splitContainer2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
             this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_Content)).EndInit();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.groupBox1.ResumeLayout(false);
